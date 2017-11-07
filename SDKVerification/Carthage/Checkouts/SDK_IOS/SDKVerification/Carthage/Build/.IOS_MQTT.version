@@ -1,0 +1,9 @@
+{
+  "commitish" : "6f55b27053bcc4e602e062511ab2e51eb9e43586",
+  "iOS" : [
+    {
+      "name" : "oneM2M",
+      "hash" : "a7100bb74507fd2fc4e554b162f560756452c5046c1e8256464ded19afe4954c"
+    }
+  ]
+}

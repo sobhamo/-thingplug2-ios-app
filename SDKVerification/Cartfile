@@ -1,4 +1,4 @@
 github "robbiehanson/CocoaAsyncSocket" "master"
 github "radex/SwiftyTimer" "master"
 github "emqtt/CocoaMQTT" "master"
-github "sobhamo/IOS_MQTT" "master"
+github "sobhamo/SDK_IOS" "master"
