@@ -20,20 +20,18 @@ CocoaMQTT | MQTT | **[CocoaMQTT github](https://github.com/emqtt/CocoaMQTT)**
 
 ## Getting Started
 ThingPlug oneM2M framework는 소스코드 형태로 제공되며 Application에서의 사용을 위해서는 다음과 같이 import하여 사용하면 됩니다.
-보다 자세한 사용 예시는 **[SDKVerification App](framework)** 소스코드를 참고하시기 바랍니다.
+보다 자세한 사용 예시는 **[SDKVerification App](https://github.com/sobhamo/SDK_IOS/tree/master/SDKVerification)** 소스코드를 참고하시기 바랍니다.
 
 ### Carthage 설치 및 framework 업데이트 
-oneM2M framework는 framework의 원할한 업데이트 적용 및 import 편의를 위하여 Carthage를 사용합니다.
-("https://github.com/Carthage/Carthage")
+oneM2M framework는 framework의 원할한 업데이트 적용 및 import 편의를 위하여 [Carthage](https://github.com/Carthage/Carthage)를 사용합니다.
 
 1. Carthage 설치 후 신규 Project 폴더에 Cartfile을 생성하고 아래 4개의 git 저장소 주소를 추가 후 저장합니다.
-
+```
 github "robbiehanson/CocoaAsyncSocket" "master"
 github "radex/SwiftyTimer" "master"
 github "emqtt/CocoaMQTT" "master"
 github "sobhamo/IOS_MQTT" "master"
-<img src="images/cartfile.png"/>
-
+```
 
 2. 터미널에서 Project 폴더로 이동 후 Carthage update 명령어를 입력합니다.
 "carthage update --platform iOS" 후 ENTER
@@ -57,7 +55,7 @@ import oneM2M
 ### Setting for MQTT connection
 MQTT server 와의 연결을 위한 정보를 oneM2M framework의 Host class 를 통해 설정해야 합니다.
 
-```java
+```swift
 let HOST = Host(name: "name", host: "host",
                 port: " port", clientId: "clientId", 
                 userName: "userName", password: "password", 
@@ -89,11 +87,8 @@ tcp://thingplugtest.skitiot.com
 ### Connects to an MQTT server
 MQTT 서버에 연결 후, 각종 이벤트 처리를 위한 MQTTDelegate 선언 및 Delegate function을 추가해 주어야 합니다.
 
-
-
-```java
-
-	var mqttClient: MQTTClient = MQTTClient(host: HOST)
+```swift
+var mqttClient: MQTTClient = MQTTClient(host: HOST)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -172,7 +167,7 @@ __tpResult__ | 제어결과를 업데이트한다. (execInstance 를 업데이�
 ### 기기 등록
 기기등록을 위한 `tpRegisterDevice` 함수의 사용예시는 다음과 같으며, 성공 실패 여부는 `MQTTCallback`에 등록된 `onResponse` 와 `onFailure` 이벤트 함수로 확인할 수 있습니다.
 
-```java
+```swift
     /**
      * @brief register node, remoteCSE
      * @param[in] resourceType : resource type
@@ -194,7 +189,7 @@ __tpResult__ | 제어결과를 업데이트한다. (execInstance 를 업데이�
 ### 센서 등록
 센서등록을 위한 `tpRegisterContainer` 함수의 사용예시는 다음과 같습니다.
 
-```java
+```swift
 	/**
      * @brief register container
      * @param[in] fr : from
@@ -213,7 +208,7 @@ __tpResult__ | 제어결과를 업데이트한다. (execInstance 를 업데이�
 ### 액츄에이터 등록
 제어가 가능한 액츄에이터등록을 위한 `tpRegisterMgmtCmd` 함수의 사용예시는 다음과 같습니다.
 
-```java
+```swift
 /**
      * @brief register mgmtCmd
      * @param[in] fr : from
@@ -235,7 +230,7 @@ __tpResult__ | 제어결과를 업데이트한다. (execInstance 를 업데이�
 ### 센서 상태 보고
 센서 상태 보고를 위한 `tpAddData`와 `tpReport` 함수의 사용예시는 다음과 같습니다.
 
-```java
+```swift
 /**
      * @brief add content data of contentInstance
      * @param[in] data : data
@@ -268,7 +263,7 @@ __tpResult__ | 제어결과를 업데이트한다. (execInstance 를 업데이�
 ### 제어 결과 보고
 제어 결과 보고를 위한 `tpResult` 함수의 사용예시는 다음과 같습니다.
 
-```java
+```swift
     /**
      * @brief report
      * @param[in] fr : from
@@ -290,7 +285,7 @@ __tpResult__ | 제어결과를 업데이트한다. (execInstance 를 업데이�
 ### Error Code
 `MQTTCallback`을 통해 발생한 응답의 성공 실패 여부를 확인하는 코드는 `SDK_IOS/oneM2M/Definitions.swift' 에 정의되어 있으며 다음과 같습니다.
 
-```java
+```swift
 /**
  * Conn Ack
  */
