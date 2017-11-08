@@ -65,11 +65,11 @@ let HOST = Host(name: "name", host: "host",
 ```
 함수 | 파라미터
 ------------ | -------------
-__host______ | MQTT broker 주소
+____host___ | MQTT broker 주소
 __clientId__ | MQTT 연결 clientID
 __userName__ | MQTT 연결 username
 __password__ | MQTT 연결 password
-__port______ | MQTT 연결 port
+____port___ | MQTT 연결 port
 __usingSSL__ | SSL 연결 여부
 cleanSession | Session 삭제 여부
 
@@ -86,24 +86,6 @@ TLS 미사용 시, ThingPlug의 MQTT broker 주소는 다음과 같습니다.
 ```
 tcp://thingplugtest.skitiot.com
 ```
-
-
-### Configuration for MQTT Message
-MQTT 메시지에 사용되어질 정보를 MQTTConfiguration을 통해 설정해야 합니다.
-
-```java
-MQTTConfiguration config = new MQTTConfiguration(appEUI,
-toBase,
-deviceResourceID,
-clientId);
-```
-파라미터 | 설명
------------- | -------------
-__appEUI__ | AppEUI
-__toBase__ | to 필드 시작 URL
-__deviceResourceID__ | 장치 고유 ID (ex : MAC-address) 
-__clientId__ | MQTT 연결 clientID
-
 ### Connects to an MQTT server
 MQTT 서버에 연결 후, 각종 이벤트 처리를 위한 MQTTDelegate 선언 및 Delegate function을 추가해 주어야 합니다.
 
