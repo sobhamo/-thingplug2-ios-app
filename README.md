@@ -319,7 +319,7 @@ public enum Result: Int8 {
 }
 ```
 ## Sample Application(s)
-* **[Simple Test App](SDK)** - oneM2M SDK 사용 Test App
+* **[Simple Test App](https://github.com/sobhamo/SDK_IOS/tree/master/SDKVerification)** - oneM2M SDK 사용 Test App
 
 
 Copyright (c) 2017 SK Telecom Co., Ltd. All Rights Reserved.
