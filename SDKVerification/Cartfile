@@ -1,1 +1,4 @@
-github "sobhamo/-thingplug2-device-sdk-ios" "master"
+github "robbiehanson/CocoaAsyncSocket" "master"
+github "radex/SwiftyTimer" "master"
+github "emqtt/CocoaMQTT" "master"
+github "sobhamo/SDK_IOS" "master"

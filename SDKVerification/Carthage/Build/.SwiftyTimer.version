@@ -1,0 +1,9 @@
+{
+  "commitish" : "77325e642504ccf1d1dde022da35c384764958e7",
+  "iOS" : [
+    {
+      "name" : "SwiftyTimer",
+      "hash" : "4634c9e1fb45248dc8737e316a05c15d67406f501864d25dbb7a6761c1ecc351"
+    }
+  ]
+}
