@@ -1,1 +1,2 @@
+github "Alamofire/Alamofire" ~> 4.6
 github "sobhamo/-thingplug2-device-sdk-ios" "master"
